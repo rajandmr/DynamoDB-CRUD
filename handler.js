@@ -13,8 +13,8 @@ module.exports.hello = async (event) => {
   const params = {
     TableName: table,
     Item: {
-      ArtistId: ArtistId,
-      Concert: Concert,
+      ArtistId,
+      Concert,
       Artist: 'Enric iglesias',
       Year: '2018',
     },
@@ -47,8 +47,8 @@ module.exports.getItemById = async (event) => {
   const params = {
     TableName: table,
     Key: {
-      ArtistId: ArtistId,
-      Concert: Concert,
+      ArtistId,
+      Concert,
     },
   };
 
@@ -101,8 +101,8 @@ module.exports.updateItem = async (event) => {
   const params = {
     TableName: table,
     Key: {
-      ArtistId: ArtistId,
-      Concert: Concert,
+      ArtistId,
+      Concert,
     },
     UpdateExpression: 'set Artist = :y',
     ExpressionAttributeValues: {
@@ -137,8 +137,8 @@ module.exports.deleteItem = async (event) => {
   const params = {
     TableName: table,
     Key: {
-      ArtistId: ArtistId,
-      Concert: Concert,
+      ArtistId,
+      Concert,
     },
   };
 
