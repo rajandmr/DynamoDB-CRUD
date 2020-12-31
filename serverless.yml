@@ -3,7 +3,6 @@ service: dynamo-tut
 provider:
   name: aws
   runtime: nodejs12.x
-  profile: default
   region: us-east-1
   deploymentBucket: modern-workshop-bucket
 
