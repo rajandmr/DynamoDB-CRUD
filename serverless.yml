@@ -3,9 +3,9 @@ service: dynamo-tut
 provider:
   name: aws
   runtime: nodejs12.x
-  profile: personal
+  # profile: personal
   region: us-east-1
-  deploymentBucket: modern-workshop-bucket
+  # deploymentBucket: modern-workshop-bucket
 
   iamRoleStatements:
     - Effect: Allow
