@@ -5,7 +5,7 @@ provider:
   runtime: nodejs12.x
   # profile: personal
   region: us-east-1
-  # deploymentBucket: modern-workshop-bucket
+  deploymentBucket: modern-workshop-bucket
 
   iamRoleStatements:
     - Effect: Allow
