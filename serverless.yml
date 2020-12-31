@@ -3,10 +3,8 @@ service: dynamo-tut
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: test 
-  profile: personal 
+  profile: personal
   deploymentBucket: modern-workshop-bucket
-
 
   iamRoleStatements:
     - Effect: Allow
@@ -18,7 +16,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "*"
+      Resource: '*'
 
 # you can overwrite defaults here
 #  stage: dev
@@ -61,19 +59,18 @@ functions:
           path: getById
           method: get
 
-  
   getItemById:
     handler: handler.getItemById
-    events: 
-      - http: 
-          path: read 
+    events:
+      - http:
+          path: read
           method: get
 
   getItems:
     handler: handler.getItems
-    events: 
-      - http: 
-          path: getAll 
+    events:
+      - http:
+          path: getAll
           method: get
 
   updateItem:
@@ -89,7 +86,7 @@ functions:
       - http:
           path: delete
           method: get
-resources: 
+resources:
   - ${file(resources/dynamo-table.yml)}
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
